@@ -11,10 +11,10 @@ export default class PortfolioContainer extends Component {
         pageTitle: "Welcome I guess",
         isLoading: false,
         data: [
-          {title: "yes", category: "yes" },
-          {title: "no", category: "no" },
-          {title: "maybe so", category: "no" },
-          {title: "probably", category: "yes" }
+          {title: "yes", category: "yes", slug:"yes" },
+          {title: "no", category: "no", slug:"no" },
+          {title: "maybe so", category: "no", slug:"maybe-so" },
+          {title: "probably", category: "yes", slug:"probably" }
         ]
       };
 
@@ -31,7 +31,7 @@ export default class PortfolioContainer extends Component {
 
     portfolioItems() {
       return this.state.data.map(item => {
-        return <PortfolioItem title={item.title} url={"google.com"} />;
+        return <PortfolioItem title={item.title} url={"google.com"} slug={item.slug} />;
       })
     }
 

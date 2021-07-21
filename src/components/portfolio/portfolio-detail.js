@@ -1,10 +1,9 @@
 import React from 'react';
-import { ProgressPlugin } from 'webpack';
 
-export default function() {
+export default function(props) {
     return (
         <div>
-            <h2>Portfolio Detail for {Props.match.params.slug}</h2>
+            <h2>Portfolio Detail for {props.match.params.slug}</h2>
         </div>
     );
 }
